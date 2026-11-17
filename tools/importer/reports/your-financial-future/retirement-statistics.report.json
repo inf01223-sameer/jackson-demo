@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.jackson.com/your-financial-future/retirement-statistics.html",
+  "path": "your-financial-future/retirement-statistics",
+  "timestamp": "2026-11-17T10:42:24.370Z",
+  "title": "Retirement research center | Jackson",
+  "template": "your-financial-future",
+  "blocks": [
+    "hero-split",
+    "tabs-findings",
+    "cards-promo"
+  ],
+  "importScript": "bd2aa8e328e6"
+}
