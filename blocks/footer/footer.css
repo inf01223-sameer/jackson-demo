@@ -1,20 +1,278 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
-}
+/* ==========================================================================
+   Footer — Jackson global footer
+   bands: main (link columns / divider / copyright + legal + social),
+          disclosures (badge, notice box, copy, form number, address)
+   mobile-first; desktop layout from 900px
+   ========================================================================== */
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer {
+  --footer-sand: #dbcfc7;
+  --footer-grey: #474546;
+  --footer-plum: #3b052e;
+  --footer-red: #eb0028;
+
+  background-color: var(--footer-sand);
+  font-family: apercu, sans-serif, verdana;
+  font-size: 10.4px;
+  line-height: 13.6px;
+  color: var(--footer-grey);
 }
 
 footer .footer p {
   margin: 0;
 }
 
+footer .footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer a:any-link {
+  color: inherit;
+  text-decoration: underline 1px;
+}
+
+footer .footer a:hover,
+footer .footer a:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
+footer .footer-inner {
+  box-sizing: border-box;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ---------- main band ---------- */
+footer .footer-main .footer-inner {
+  padding: 20px 20px 30px;
+}
+
+/* mobile: 2-up grid (third column wraps), indented */
+footer .footer-columns {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 10px;
+  padding: 0 0 25px 30px;
+}
+
+footer .footer-column h3 {
+  margin: 0 0 10px;
+  font-family: inherit;
+  font-size: 12.8px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--footer-grey);
+}
+
+footer .footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .footer-column a:any-link {
+  display: inline-block;
+  font-size: 12.8px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+footer .footer-divider {
+  height: 1px;
+  margin: 30px 0;
+  border: 0;
+  background-color: var(--footer-plum);
+}
+
+footer .footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+footer .footer-legal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+footer .footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 12px;
+}
+
+footer .footer-legal-links a:any-link {
+  font-weight: 600;
+}
+
+/* social icons: masked glyph so colour follows currentcolor */
+footer .footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+footer .footer a.footer-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border: 2px solid currentcolor;
+  color: var(--footer-grey);
+}
+
+footer .footer-social-icon::before {
+  content: '';
+  width: 22px;
+  height: 20px;
+  background-color: currentcolor;
+  mask: var(--footer-icon) center / contain no-repeat;
+}
+
+footer .footer-social-icon img {
+  display: none;
+}
+
+footer .footer a.footer-social-icon:hover,
+footer .footer a.footer-social-icon:focus-visible {
+  color: var(--footer-red);
+}
+
+/* ---------- disclosures band ---------- */
+footer .footer-disclosures {
+  background-color: var(--footer-grey);
+  font-family: roboto, sans-serif;
+  color: #fff;
+}
+
+footer .footer-disclosures .footer-inner {
+  display: flow-root;
+  padding: 30px 20px;
+}
+
+footer .footer-disclosures p {
+  font-weight: 300;
+}
+
+footer .footer-disclosures a:any-link {
+  font-weight: 500;
+}
+
+footer .footer-disclosures p + p {
+  margin-top: 20px;
+}
+
+footer .footer p.footer-badge {
+  float: right;
+  margin: 0 0 25px 25px;
+}
+
+footer .footer-badge img {
+  display: block;
+  width: 171px;
+  height: 88px;
+}
+
+footer .footer-disclosures .footer-badge + p {
+  margin-top: 0;
+}
+
+footer .footer-notice strong {
+  display: inline-block;
+  padding: 8px 6px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+footer .footer-disclosures .footer-notice + p {
+  margin-top: 15px;
+}
+
+/* ==========================================================================
+   Tablet: three columns in a row, legal stacked left with social right
+   ========================================================================== */
+@media (width >= 600px) {
+  footer {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  footer .footer-columns {
+    display: flex;
+  }
+
+  footer .footer-column {
+    flex: 1 1 0;
+  }
+
+  footer .footer-column h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  footer .footer-column a:any-link {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  footer .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  footer .footer-legal {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  footer .footer-legal-links {
+    justify-content: flex-start;
+    gap: 0 10px;
+  }
+
+  footer .footer-notice strong {
+    padding: 8px 20px;
+  }
+}
+
+/* ==========================================================================
+   Desktop
+   ========================================================================== */
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-columns {
+    width: 60%;
+    padding: 0;
+  }
+
+  footer .footer-column {
+    flex: 0 1 30%;
+    max-width: 30%;
+  }
+
+  footer .footer-bottom {
+    gap: 0;
+  }
+
+  footer .footer-legal {
+    flex: 1 1 auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  footer .footer-social {
+    flex: 0 0 auto;
   }
 }

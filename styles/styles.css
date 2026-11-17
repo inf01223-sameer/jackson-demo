@@ -36,8 +36,8 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
 
-  /* nav height */
-  --nav-height: 64px;
+  /* nav height: utility bar + main bar (breadcrumb adds 39px on inner pages) */
+  --nav-height: 164px;
 }
 
 /* fallback fonts */
@@ -67,6 +67,13 @@
     --heading-font-size-m: 22px;
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
+  }
+}
+
+@media (width >= 1200px) {
+  :root {
+    /* header: utility bar + main bar + contact row (breadcrumb adds 44px) */
+    --nav-height: 161px;
   }
 }
 
