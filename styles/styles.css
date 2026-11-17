@@ -241,6 +241,12 @@ main img {
 }
 
 /* sections */
+
+/* sections left empty once metadata is lifted into <head> */
+main > .section:not(:has(*)) {
+  display: none;
+}
+
 main > .section {
   margin: var(--section-spacing) 0 0;
 }
@@ -255,7 +261,8 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
-main > .section:last-of-type {
+/* last section with content (ignores trailing empty sections) */
+main > .section:not(:has(~ .section *)) {
   margin-bottom: 100px;
 }
 
@@ -271,7 +278,7 @@ main .section.highlight {
 }
 
 /* closing legal disclosure (final text-only section): Roboto, grey, separator rule */
-main > .section:last-of-type:not(:has(.block)) > .default-content-wrapper {
+main > .section:not(:has(.block), :has(~ .section *)) > .default-content-wrapper {
   max-width: none;
   padding: 0 40px;
   font-family: var(--disclosure-font-family);
@@ -280,7 +287,7 @@ main > .section:last-of-type:not(:has(.block)) > .default-content-wrapper {
   color: var(--brand-grey-light);
 }
 
-main > .section:last-of-type:not(:has(.block)) > .default-content-wrapper::before {
+main > .section:not(:has(.block), :has(~ .section *)) > .default-content-wrapper::before {
   content: '';
   display: block;
   height: 1px;
@@ -288,15 +295,15 @@ main > .section:last-of-type:not(:has(.block)) > .default-content-wrapper::befor
   background-color: var(--brand-grey-light);
 }
 
-main > .section:last-of-type:not(:has(.block)) p {
+main > .section:not(:has(.block), :has(~ .section *)) p {
   margin: 15px 0 0;
 }
 
-main > .section:last-of-type:not(:has(.block)) p:first-child {
+main > .section:not(:has(.block), :has(~ .section *)) p:first-child {
   margin-top: 0;
 }
 
-main > .section:last-of-type:not(:has(.block)) sup {
+main > .section:not(:has(.block), :has(~ .section *)) sup {
   font-size: 12px;
   line-height: 0;
 }
