@@ -1,9 +1,11 @@
 {
+  "type": "da",
   "sites": {
     "jackson-demo": {
       "previewOrg": "inf01223-sameer",
       "previewSite": "jackson-demo",
-      "contentHostUrl": "https://content.da.live/inf01223-sameer/jackson-demo/"
+      "contentHostUrl": "https://content.da.live/inf01223-sameer/jackson-demo/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
     }
   }
 }

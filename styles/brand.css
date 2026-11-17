@@ -1,0 +1,65 @@
+/* Jackson brand tokens — extracted from www.jackson.com (migration-work/brand.json) */
+:root {
+  /* brand palette */
+  --brand-red: #eb0028;
+  --brand-plum: #5c2642;
+  --brand-plum-dark: #3b052e;
+  --brand-sand: #dbcfc7;
+  --brand-sand-light: #f1ece9;
+  --brand-grey: #474546;
+  --brand-grey-light: #666;
+
+  /* base colors */
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: var(--brand-red);
+  --link-hover-color: var(--brand-red);
+  --heading-color: var(--brand-plum);
+  --light-color: var(--brand-sand-light);
+  --dark-color: var(--brand-grey);
+
+  /* fonts */
+  --body-font-family: apercu, sans-serif, verdana;
+  --heading-font-family: 'superior title', georgia, serif;
+  --disclosure-font-family: roboto, sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 20px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 12.8px;
+  --body-line-height: 20.8px;
+
+  /* heading sizes (mobile) */
+  --heading-font-size-xxl: 36.8px;
+  --heading-font-size-xl: 40px;
+  --heading-font-size-l: 27.2px;
+  --heading-font-size-m: 19.2px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
+
+  /* spacing */
+  --section-spacing: 32px;
+  --content-max-width: 1300px;
+  --content-gutter: 40px;
+}
+
+@media (width >= 900px) {
+  :root {
+    --body-font-size-xs: 16px;
+    --body-line-height: 26px;
+    --heading-font-size-xxl: 46px;
+    --heading-font-size-xl: 40px;
+    --heading-font-size-l: 34px;
+    --heading-font-size-m: 24px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 16px;
+    --section-spacing: 52px;
+  }
+}
+
+@media (width >= 1200px) {
+  :root {
+    --section-spacing: 92px;
+    --content-gutter: 70px;
+  }
+}

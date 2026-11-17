@@ -1,0 +1,94 @@
+{
+  "templates": [
+    {
+      "name": "your-financial-future",
+      "urls": [
+        "https://www.jackson.com/your-financial-future/retirement-statistics.html"
+      ],
+      "representativeUrl": "https://www.jackson.com/your-financial-future/retirement-statistics.html",
+      "description": "Your Financial Future subpages: split hero, tabbed research findings, promo cards, disclosure",
+      "blocks": [
+        {
+          "name": "hero-split",
+          "instances": [
+            ".herospace .subpage-herospace-block"
+          ]
+        },
+        {
+          "name": "tabs-findings",
+          "instances": [
+            ".tab-container.v4 .tab.v4"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [
+            ".layout-container .two-column"
+          ]
+        }
+      ],
+      "urlPattern": "/your-financial-future/*",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "hero",
+          "selector": [
+            ".content-wrapper > .herospace",
+            ".herospace"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-split"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "research-intro-and-tabs",
+          "selector": [
+            ".content-wrapper > .tab-container.v4",
+            ".tab-container.v4"
+          ],
+          "style": null,
+          "blocks": [
+            "tabs-findings"
+          ],
+          "defaultContent": [
+            ".tab-container.v4 > .content-area > .header"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "additional-resources",
+          "selector": [
+            ".content-wrapper > .layout-container",
+            ".layout-container"
+          ],
+          "style": "centered",
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": [
+            ".layout-container > .content-area > h3"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "disclosure",
+          "selector": [
+            ".content-wrapper > .disclosure",
+            ".disclosure"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".disclosure > .content-area > p"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "variantName": "hero-split",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Top-of-page banner with the page title on a solid panel beside a photo",
+    "layout": "split",
+    "imagePosition": "right",
+    "panel": "solid beige text panel left, image right half",
+    "heading": "large red serif H1",
+    "notes": "Text on a solid panel on the left, photo on the right half (not a full-bleed background image). Stacks text over image below 900px."
+  },
+  "contentPattern": {
+    "structure": "row 1: image; row 2: H1 heading (optional paragraphs). Cell order is not significant: the first picture becomes the media column, everything else the text panel",
+    "rows": [
+      ["Image"],
+      ["H1 heading"]
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Use once at the top of a page for the page title with a supporting photo shown beside (not behind) the text.",
+  "reuseGuidance": "Reuse for any page banner with a heading on a solid panel and a side image. Use the plain hero block when the image is a full-bleed background behind the text."
+}

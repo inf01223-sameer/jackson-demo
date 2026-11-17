@@ -1,0 +1,21 @@
+{
+  "variantName": "cards-promo",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Promotional cards linking to related resources, each with a photo above a dark panel",
+    "card": "photo on top, dark plum solid panel below",
+    "text": "centered H3, description and red button",
+    "notes": "Photo on top, dark solid panel below with centered title, description and button. Cards flow and wrap in a responsive grid."
+  },
+  "contentPattern": {
+    "structure": "one row per card: [image | H3 title + paragraph + link]",
+    "rows": [
+      ["Image", "H3 title; paragraph; link"]
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Use for a small set of promotional cards pointing to related pages, typically under an 'Additional resources' heading.",
+  "reuseGuidance": "Reuse for any image-topped promo cards with a dark text panel and a single call to action. Use the plain cards block for light, bordered cards."
+}

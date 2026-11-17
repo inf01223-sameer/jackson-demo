@@ -1,0 +1,22 @@
+{
+  "variantName": "tabs-findings",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Topic tabs where each panel shows key findings beside an image, with a collapsible list of related reports and links",
+    "tabBar": "underline tab bar, active tab boxed with red label",
+    "panel": "centered H2 above a two-column findings row (text + CTA left, partner image right)",
+    "collapsible": "'Reporting and analysis' expandable section (button with aria-expanded) containing H4 groups with link lists, built inside the block",
+    "notes": "Underline tab bar with ARIA tablist/tab/tabpanel and arrow/Home/End keyboard support. Blocks cannot nest, so the collapsible is rendered by this block from the panel content."
+  },
+  "contentPattern": {
+    "structure": "one row per tab: [tab label | panel content]. Panel content in order: H2 (e.g. 'Key findings'); H3 headline; summary paragraph; CTA link; image; H3 collapsible title (e.g. 'Reporting and analysis'); then one or more H4 group headings, each followed by a list or paragraphs of links. The collapsible starts at the last H2/H3 before the first H4; picture-only paragraphs before it form the right-hand image column",
+    "rows": [
+      ["Tab label", "H2; H3 headline; paragraph; CTA link; image; H3 collapsible title; H4 + links; H4 + links"]
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Use for a set of research topics where each topic has a headline finding, a call to action, an image and a list of supporting reports.",
+  "reuseGuidance": "Reuse for any tabbed findings or topic panels that pair text and an image and end with a grouped link list. Panels without H4 groups render without the collapsible; panels without an image render the text full width. Use the plain tabs block for simple tabbed content."
+}

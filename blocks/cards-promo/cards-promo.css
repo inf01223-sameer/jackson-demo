@@ -1,0 +1,105 @@
+/* Promo cards: photo on top, dark plum panel below with title, text and a red CTA.
+   Values from jackson.com .two-column .promo-card (measured at 375-1600px). */
+
+/* the source row has no side gutter on small screens; the cards sit 20px from the edge */
+.cards-promo > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px calc(-1 * var(--content-gutter)) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-promo .cards-promo-card {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  margin: 20px;
+  font-family: var(--body-font-family);
+}
+
+.cards-promo .cards-promo-card-image {
+  line-height: 0;
+}
+
+.cards-promo .cards-promo-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cards-promo .cards-promo-card-body {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 30px 30px 100px;
+  background-color: var(--brand-plum-dark);
+  text-align: center;
+}
+
+.cards-promo .cards-promo-card-body h3 {
+  margin: 0;
+  padding: 5px;
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: var(--brand-sand);
+}
+
+.cards-promo .cards-promo-card-body p {
+  margin: 0;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+  color: #fff;
+}
+
+/* CTA is pinned 20px above the panel bottom so buttons line up across cards */
+.cards-promo .cards-promo-card-body .cards-promo-card-cta {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  padding: 0 20px;
+}
+
+main .cards-promo a.button:any-link {
+  display: flex;
+  width: 100%;
+  line-height: 20.8px;
+}
+
+@media (width >= 480px) {
+  .cards-promo .cards-promo-card-body p,
+  main .cards-promo a.button:any-link {
+    line-height: 26px;
+  }
+}
+
+@media (width >= 600px) {
+  .cards-promo > ul {
+    margin-inline: calc(32px - var(--content-gutter));
+  }
+
+  main .cards-promo a.button:any-link {
+    display: inline-flex;
+    width: auto;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-promo .cards-promo-card {
+    width: calc(50% - 45px);
+  }
+}
+
+/* wide screens: the source row is inset 90px from the viewport, capped at 1300px */
+@media (width >= 1300px) {
+  .cards-promo > ul {
+    margin-inline: clamp(0px, calc((1480px - 100vw) / 2), 20px);
+  }
+}

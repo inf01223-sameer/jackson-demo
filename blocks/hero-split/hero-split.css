@@ -1,0 +1,67 @@
+/* hero-split: values from www.jackson.com .subpage-herospace-block computed styles */
+
+/* source hero is full-bleed up to 1480px (.herospace .content-area { max-width: 1480px; padding: 0 }) */
+main > .section.hero-split-container > .hero-split-wrapper {
+  max-width: 1480px;
+  padding: 0;
+}
+
+.hero-split {
+  display: flex;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.hero-split .hero-split-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 40px;
+  background-color: var(--brand-sand-light);
+  color: var(--brand-plum);
+  text-align: left;
+}
+
+.hero-split .hero-split-content h1 {
+  margin: 0;
+  color: var(--brand-red);
+}
+
+.hero-split .hero-split-content p {
+  margin: 0;
+}
+
+/* source hero title is 36.8px/44.8px only up to 470px wide, 46px/56px above */
+@media (width >= 471px) {
+  .hero-split .hero-split-content h1 {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+/* source hides the hero image at max-width: 975px */
+.hero-split .hero-split-media {
+  display: none;
+}
+
+@media (width >= 976px) {
+  .hero-split .hero-split-media {
+    display: block;
+    flex: 0 0 auto;
+    line-height: 0;
+  }
+
+  .hero-split .hero-split-media picture {
+    display: block;
+    height: 100%;
+  }
+
+  /* source: img { width: auto; height: 100% } of a 620x275 rendition */
+  .hero-split .hero-split-media img {
+    display: block;
+    width: auto;
+    max-width: none;
+    height: 275px;
+  }
+}

@@ -250,6 +250,9 @@ function segmentLabel(segment) {
 function decorateBreadcrumb(section) {
   const home = section.querySelector('a');
   const segments = window.location.pathname.split('/').filter(Boolean);
+  // local preview serves pages under /content/; that prefix is not part of the site path
+  const prefix = segments[0] === 'content' ? '/content' : '';
+  if (prefix) segments.shift();
   if (segments.length && /^index(\.html)?$/.test(segments[segments.length - 1])) segments.pop();
   if (!home || !segments.length) return false;
 
@@ -259,7 +262,7 @@ function decorateBreadcrumb(section) {
   const homeLi = document.createElement('li');
   homeLi.append(home);
   ol.append(homeLi);
-  let path = '';
+  let path = prefix;
   segments.forEach((segment, i) => {
     path += `/${segment}`;
     const li = document.createElement('li');
